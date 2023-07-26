@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask import session as login_session
 import pyrebase
-import random
 
 config = {
     "apiKey": "AIzaSyCCnt5xrueFHh-XyLPWyP6XUZRkpi8tGco",
@@ -59,10 +58,11 @@ def signin():
 def home():
     pdict = db.child("Posts").get().val()
     pos = []
+    post_list = []
     for i in pdict:
         pos.append(pdict[i])
     for x in range(len(pos)):
-        post_list = [pos[random.randint(0, len(pos)-1)]]
+        post_list.append(pos[x])
     return render_template("home.html", post_list = post_list)
 
 @app.route('/profile', methods=['GET', 'POST'])
