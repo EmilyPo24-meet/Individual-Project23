@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/signup.css') }}">
+	   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sideb.css') }}">
+    <meta charset="UTF-8">
+    <title>Add Post</title>
+</head>
+<body>
+    <form class="container" method="POST" action="/add_post">
+        <label>Picture*</label>
+        <br>
+            <input type="text" name="picture">
+        <br>
+            <label>desc*</label>
+        <br>    
+            <input type="text" name="picture_desc" maxlength="100">
+        <div>
+            <br>
+            <input class="instagram-button" type="submit"/>
+        </div>
+    </form>
+    <div class="sidebar">
+		<button class="nav-button" onclick="window.location.href='home'">Home</button>
+		<button class="nav-button" onclick="window.location.href='add_post'">Add Post</button>
+		<button class="nav-button" onclick="window.location.href='profile'">My Profile</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,66 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b5d6d6;
+}
+
+.profile {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #b5d6d6;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  box-shadow: 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.circular-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+  display: block;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  margin: 0;
+  color: #333;
+}
+
+.nickname {
+  font-size: 18px;
+  text-align: center;
+  margin: 5px 0;
+  color: #777;
+}
+
+.bio {
+  font-size: 16px;
+  text-align: center;
+  color: #555;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instagram-button {
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color:
+  outline: none;
+}

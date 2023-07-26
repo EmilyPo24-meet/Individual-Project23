@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/sideb.css') }}">
+    <meta charset="UTF-8">
+    <title>My Profile</title>
+</head>
+<body>
+	<div class="profile">
+		<h3 class = "header">{{user_profile['username']}}</h3>
+		<br>
+		<img class= "circular-image" src="{{user_profile['pfp']}}" alt="profile_picture">
+		<h4 class = "nickname">{{user_profile['name']}}</h4>
+		<h4 class = "bio"> bio : {{user_profile['bio']}}</h4>
+
+		<div class="center">
+			<div class="sidebar">
+				<button class="nav-button" onclick="window.location.href='home'">Home</button>
+				<button class="nav-button" onclick="window.location.href='add_post'">Add Post</button>
+				<button class="nav-button" onclick="window.location.href='profile'">My Profile</button>
+			</div>
+			<button class="instagram-button" onclick="window.location.href='signout'">Signout</button>
+			<button class="instagram-button" onclick="window.location.href='delete'">Delete Account</button>
+		</div>
+	</div>
+		<div>
+		<h2 align="center">My Posts</h2>
+		<div align="center" class="feed-container">
+			{% for post in user_posts %}
+				<div class="post-card">
+				<img src="{{ post['postpic'] }}" width="300px">
+			<div class="post-info">
+				<figcaption class="post-caption">{{ post['postdesc'] }}</figcaption>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</body>
+</html>

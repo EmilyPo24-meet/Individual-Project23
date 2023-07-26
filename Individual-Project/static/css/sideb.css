@@ -1,0 +1,34 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #b5d6d6;
+}
+
+.sidebar {
+  position: fixed;
+  top: 9%;
+  left: 20px;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0; /* Light grey background color */
+  color: #333; /* Dark grey text color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: left;
+  transition: background-color 0.3s ease; /* Add smooth transition on hover */
+  margin-right: 10px;
+  background-color: #e0e0e0; /* Slightly darker shade on hover */
+}
+
